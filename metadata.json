@@ -1,0 +1,6 @@
+{
+  "name": "Nexus Write — Explainable Writing Intelligence",
+  "description": "Futuristic interactive educational writing-analysis platform featuring transparent Python text analytics, holographic 3D visualization, passage comparison, and style intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

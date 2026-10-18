@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-heading: 'Chakra Petch', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #090618;
+    color: #f8fafc;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: 0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom scrollbars with colorful gradient thumb */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(14, 10, 32, 0.95);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6, #06b6d4, #10b981);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #f43f5e, #a855f7, #38bdf8, #34d399);
+}
+
+/* Atmospheric colorful ambient glow backdrop variants */
+.theme-rainbow {
+  background-image: 
+    radial-gradient(at 5% 5%, rgba(236, 72, 153, 0.28) 0px, transparent 45%),
+    radial-gradient(at 95% 5%, rgba(139, 92, 246, 0.32) 0px, transparent 45%),
+    radial-gradient(at 50% 30%, rgba(6, 182, 212, 0.2) 0px, transparent 55%),
+    radial-gradient(at 10% 85%, rgba(245, 158, 11, 0.22) 0px, transparent 45%),
+    radial-gradient(at 90% 85%, rgba(16, 185, 129, 0.25) 0px, transparent 45%);
+}
+
+.theme-sunset {
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(244, 63, 94, 0.35) 0px, transparent 50%),
+    radial-gradient(at 90% 10%, rgba(249, 115, 22, 0.35) 0px, transparent 50%),
+    radial-gradient(at 50% 40%, rgba(217, 70, 239, 0.25) 0px, transparent 50%),
+    radial-gradient(at 20% 90%, rgba(245, 158, 11, 0.3) 0px, transparent 50%),
+    radial-gradient(at 80% 90%, rgba(168, 85, 247, 0.25) 0px, transparent 50%);
+}
+
+.theme-cyber {
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(6, 182, 212, 0.35) 0px, transparent 50%),
+    radial-gradient(at 90% 10%, rgba(59, 130, 246, 0.35) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(16, 185, 129, 0.25) 0px, transparent 55%),
+    radial-gradient(at 20% 90%, rgba(14, 165, 233, 0.25) 0px, transparent 50%),
+    radial-gradient(at 80% 90%, rgba(99, 102, 241, 0.3) 0px, transparent 50%);
+}
+
+.theme-berry {
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(168, 85, 247, 0.35) 0px, transparent 50%),
+    radial-gradient(at 90% 10%, rgba(236, 72, 153, 0.35) 0px, transparent 50%),
+    radial-gradient(at 50% 45%, rgba(192, 132, 252, 0.25) 0px, transparent 50%),
+    radial-gradient(at 20% 90%, rgba(129, 140, 248, 0.25) 0px, transparent 50%),
+    radial-gradient(at 80% 90%, rgba(244, 63, 94, 0.3) 0px, transparent 50%);
+}
+
+/* Ultra-vibrant colorful cards */
+.holo-card {
+  background: rgba(18, 13, 42, 0.82);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  box-shadow: 0 10px 36px 0 rgba(0, 0, 0, 0.45), inset 0 0 20px rgba(168, 85, 247, 0.08);
+  backdrop-filter: blur(14px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.holo-card:hover {
+  border-color: rgba(236, 72, 153, 0.5);
+  box-shadow: 0 14px 42px 0 rgba(168, 85, 247, 0.25), inset 0 0 24px rgba(6, 182, 212, 0.12);
+}
+
+/* Distinct Vibrant Card Themes */
+.card-pink {
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.18), rgba(236, 72, 153, 0.08), rgba(15, 10, 35, 0.9));
+  border: 1px solid rgba(244, 63, 94, 0.4);
+  box-shadow: 0 8px 24px -4px rgba(244, 63, 94, 0.25);
+}
+.card-pink:hover {
+  border-color: rgba(244, 63, 94, 0.7);
+  box-shadow: 0 12px 32px -4px rgba(244, 63, 94, 0.4);
+}
+
+.card-purple {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.18), rgba(139, 92, 246, 0.08), rgba(15, 10, 35, 0.9));
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  box-shadow: 0 8px 24px -4px rgba(168, 85, 247, 0.25);
+}
+.card-purple:hover {
+  border-color: rgba(168, 85, 247, 0.7);
+  box-shadow: 0 12px 32px -4px rgba(168, 85, 247, 0.4);
+}
+
+.card-emerald {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(5, 150, 105, 0.08), rgba(15, 10, 35, 0.9));
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  box-shadow: 0 8px 24px -4px rgba(16, 185, 129, 0.25);
+}
+.card-emerald:hover {
+  border-color: rgba(16, 185, 129, 0.7);
+  box-shadow: 0 12px 32px -4px rgba(16, 185, 129, 0.4);
+}
+
+.card-cyan {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.18), rgba(14, 165, 233, 0.08), rgba(15, 10, 35, 0.9));
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  box-shadow: 0 8px 24px -4px rgba(6, 182, 212, 0.25);
+}
+.card-cyan:hover {
+  border-color: rgba(6, 182, 212, 0.7);
+  box-shadow: 0 12px 32px -4px rgba(6, 182, 212, 0.4);
+}
+
+.card-amber {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.18), rgba(217, 119, 6, 0.08), rgba(15, 10, 35, 0.9));
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  box-shadow: 0 8px 24px -4px rgba(245, 158, 11, 0.25);
+}
+.card-amber:hover {
+  border-color: rgba(245, 158, 11, 0.7);
+  box-shadow: 0 12px 32px -4px rgba(245, 158, 11, 0.4);
+}
+
+.card-indigo {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.18), rgba(79, 70, 229, 0.08), rgba(15, 10, 35, 0.9));
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 24px -4px rgba(99, 102, 241, 0.25);
+}
+.card-indigo:hover {
+  border-color: rgba(99, 102, 241, 0.7);
+  box-shadow: 0 12px 32px -4px rgba(99, 102, 241, 0.4);
+}
